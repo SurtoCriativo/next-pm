@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 🎨 Cores de destaque */
+  --accent-purple: #9d8afe;
+  --accent-blue: #55a1f2;
+  --accent-pink: #ed58cc;
+  --accent-orange: #ff9d3b;
+  --accent-yellow: #fabc40;
+  --accent-green: #44cb93;
+
+  /* 📝 Cores de texto */
+  --text-white: #ffffff;
+  --text-light: #9ca3af;
+  --text-dark: #444d5a;
+  --text-darker: #1b1f24;
+
+  /* 🪟 Cores de superfície */
+  --surface-lighter: #f9fafb;
+  --surface-dark: #1b1f24;
+  --surface-darker: #0e0f12;
+  --surface-border: #374151;
+
+  /* 🔤 Cores padrão */
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #080b12;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  @apply bg-[var(--background)] text-[var(--foreground)];
+}
