@@ -115,24 +115,24 @@ export default function DesktopBenefitCard() {
       </div>
 
       {/* Conteúdo */}
-      <div className="w-full max-w-[1128px] px-[76px] flex gap-16 relative z-20 mx-auto">
+      <div className="max-w-[1128px] flex gap-x-[120px] relative z-20 mx-auto">
         {/* Coluna esquerda */}
         <div className="w-[360px] shrink-0">
-          <h3 className="text-[48px] font-gochi text-[var(--accent-blue)] mb-2">
+          <h3 className="text-[48px] font-gochi text-[var(--accent-blue)]">
             Quer saber...
           </h3>
-          <h2 className="text-white text-[32px] font-black leading-tight">
+          <h2 className="text-white text-[40px] font-black leading-tight">
             O que vai encontrar no curso?
           </h2>
         </div>
 
         {/* Coluna direita */}
         <div className="flex flex-col w-[648px] h-[892px]">
-          <p className="text-white text-[32px] font-gochi mb-8">
+          <p className="text-white text-[32px] font-gochi mb-[24px]">
             Tudo o que você precisa para passar no exame PMP de primeira
           </p>
 
-          <div className="grid grid-cols-2 gap-x-[24px] gap-y-[24px]">
+          <div className="grid grid-cols-2 gap-x-[24px] gap-y-[24px] mr-[96px]">
             {cardList.map((card, index) => (
               <Card key={index} {...card} />
             ))}

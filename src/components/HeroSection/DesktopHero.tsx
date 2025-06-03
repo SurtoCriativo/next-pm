@@ -17,10 +17,10 @@ function DesktopHero() {
   return (
     <div className="w-dvw flex justify-center items-center relative h-[696px]">
       {/* Iluminação */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-dvw h-[200px] bg-[radial-gradient(ellipse_at_bottom,_#238CFF_80%,_#1B1F24_100%)] blur-[100px] opacity-100 rounded-full z-0 pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1328px] h-[150px] bg-[radial-gradient(ellipse_at_bottom,_#238CFF_80%,_#1B1F24_100%)] blur-[100px] opacity-100 rounded-full z-0 pointer-events-none" />
 
-      <div className="w-dvw  mx-auto flex justify-between items-center px-[76px]">
-        <div className="text-left">
+      <div className="max-w-[1128px] gap-x-6 mx-auto flex justify-between items-center">
+        <div className="w-[648px] text-left">
           <h1 className="text-[64px] font-black leading-tight text-white">
             Conquiste sua <br />
             Certificação PMP
@@ -33,7 +33,7 @@ function DesktopHero() {
             </span>
           </h1>
 
-          <p className="mt-4 w-[552px] text-base font-semibold text-white leading-relaxed">
+          <p className="mt-4 text-base font-semibold text-white leading-relaxed">
             O curso intensivo que vai te levar direto à aprovação no exame PMP,
             com aulas objetivas, simulados estratégicos e suporte completo.
           </p>
