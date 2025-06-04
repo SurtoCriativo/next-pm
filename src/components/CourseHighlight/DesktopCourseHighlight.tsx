@@ -19,7 +19,7 @@ export default function DesktopCourseHighlight() {
 
       <div className="w-full max-w-[1128px] relative z-10 flex flex-col gap-[120px]">
         {/* Bloco 1 */}
-        <div className="flex items-start justify-between gap-[120px]">
+        <div className="flex items-start justify-between gap-[120px] pb-[60px]">
           <div className="w-[360px]">
             <h3 className="font-gochi text-[32px] text-emerald-400 mb-2">
               Pra quem é este curso?
@@ -50,7 +50,7 @@ export default function DesktopCourseHighlight() {
         </div>
 
         {/* Bloco 2 */}
-        <div className="flex items-start justify-between gap-[120px]">
+        <div className="flex items-start justify-between gap-[120px] pt-[60px]">
           <div className="w-[648px] h-[365px] bg-gray-600 rounded-lg overflow-hidden flex items-center justify-center text-white text-xl">
             <Image
               src="/img-02.png"
@@ -68,11 +68,11 @@ export default function DesktopCourseHighlight() {
             <h3 className="font-gochi text-[32px] text-pink-400 mb-2">
               Guiado por quem entende
             </h3>
-            <h2 className="text-white text-[40px] font-black leading-tight mb-4">
+            <h2 className="text-white text-[40px] font-black leading-[44px] mb-4">
               Especialistas que já passaram
               <br /> por onde você está
             </h2>
-            <p className="text-white/80 text-base leading-relaxed">
+            <p className="text-white/80 text-base leading-[24px]">
               Eles não só ensinam. Vivem o que falam. Com mais de 10 anos de
               experiência em gestão e agilidade, criaram um método direto,
               focado no que realmente cai na prova e no que acontece nos

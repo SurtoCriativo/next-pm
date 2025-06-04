@@ -5,9 +5,9 @@ import ModulesSection from "../components/ModulesSection/ModulesSection";
 import CinematicQualitySection from "../components/CinematicQuality/CinematicQualitySection";
 import TestimonialSection from "../components/TestimonialSection";
 import CourseHighlightSection from "../components/CourseHighlight/CourseHighlightSection";
-import CertificateSection from "../components/CertificateSection";
-import PricingSection from "../components/PricingSection";
-import FaqSection from "../components/FaqSection";
+import CertificateSection from "../components/CertificateSection/CertificateSection";
+import PricingSection from "../components/PricingSection/PricingSection";
+import FaqSection from "../components/FaqSection/FaqSection";
 
 export default function Home() {
   return (
