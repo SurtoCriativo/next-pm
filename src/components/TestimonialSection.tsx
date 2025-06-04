@@ -78,7 +78,7 @@ export default function TestimonialSection() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl w-full px-4 text-center">
+      <div className="relative z-10 w-[1128px] px-4 text-center">
         <div className="flex flex-col items-center gap-2">
           <div className="flex items-center gap-4 text-white text-[96px] font-bold">
             <Image src="/ramo-left.svg" alt="laurel" width={50} height={32} />

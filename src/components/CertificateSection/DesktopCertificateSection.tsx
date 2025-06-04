@@ -4,16 +4,22 @@ import Image from "next/image";
 
 export default function DesktopCertificateSection() {
   return (
-    <section className="w-full flex justify-center bg-[var(--background-darker)] py-[80px] relative overflow-hidden">
-      {/* Grade de fundo centralizada */}
+    <section className="w-full bg-[var(--background-darker)] py-[120px] flex flex-col items-center relative overflow-hidden">
+      {/* Grade central sutil e menor */}
       <div
-        className="absolute inset-0 z-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none z-0"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(62,109,253,0.08) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(62,109,253,0.08) 1px, transparent 1px)
+            linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)
           `,
-          backgroundSize: "32px 32px",
+          backgroundSize: "28px 28px",
+          maskImage: `
+            radial-gradient(circle at center, black 20%, transparent 70%)
+          `,
+          WebkitMaskImage: `
+            radial-gradient(circle at center, black 20%, transparent 70%)
+          `,
         }}
       />
 

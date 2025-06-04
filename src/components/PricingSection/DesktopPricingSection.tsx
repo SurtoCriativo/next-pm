@@ -4,19 +4,24 @@ import Image from "next/image";
 
 export default function DesktopPricingSection() {
   return (
-    <section className="w-full flex justify-center bg-[var(--background-darker)] py-20 relative overflow-hidden">
+    <section className="w-full flex justify-center bg-[var(--background-darker)] py-[120PX] relative overflow-hidden">
       {/* Grade de fundo + iluminação sobreposta */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Grade */}
         <div
-          className="absolute top-1/2 left-0 w-full h-[505px] -translate-y-1/2 z-0"
+          className="absolute top-1/2 left-0 w-full h-full -translate-y-1/2 z-0"
           style={{
             backgroundImage: `
-              linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)
-            `,
-            backgroundSize: "28px 25px",
-            backgroundPosition: "0 22px",
+            linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)
+          `,
+            backgroundSize: "28px 28px",
+            maskImage: `
+            radial-gradient(circle at center, black 20%, transparent 70%)
+          `,
+            WebkitMaskImage: `
+            radial-gradient(circle at center, black 20%, transparent 70%)
+          `,
           }}
         />
         {/* Iluminação */}
@@ -24,7 +29,7 @@ export default function DesktopPricingSection() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to top, #9D8AFE 0%, transparent 80%)",
+              "linear-gradient(to top, #9D8AFE 0%, transparent 40%)",
             opacity: 0.4,
           }}
         />
