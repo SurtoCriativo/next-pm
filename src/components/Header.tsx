@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <>
-      {/* HEADER FIXO */}
+      {/* HEADER FIXO TESTE */}
       <header className="fixed top-0 left-0 w-dvw  bg-[#080B12] font-archivo z-50">
         <div className="w-dvw mx-auto px-4 lg:px-[76px] py-4 flex items-center justify-between">
           {/* LOGO RESPONSIVO */}
