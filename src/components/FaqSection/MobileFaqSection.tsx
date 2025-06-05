@@ -35,7 +35,7 @@ export default function MobileFaqSection() {
   };
 
   return (
-    <section className="w-full flex flex-col items-center bg-[var(--background-darker)] px-4 py-20">
+    <section className="w-full flex flex-col items-center bg-[var(--background-darker)] px-4 py-10">
       <div className="max-w-[343px] w-full">
         <h3 className="text-yellow-400 font-gochi text-[32px] mb-4">
           Ainda com dúvida?

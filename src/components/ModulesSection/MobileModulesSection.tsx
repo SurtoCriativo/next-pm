@@ -79,7 +79,7 @@ const modules = [
   },
   {
     id: 6,
-    title: "Execução e\nMonitoramento do Projeto",
+    title: "Execução e Monitoramento do Projeto",
     colorText: "text-[var(--accent-green)]",
     colorBg: "bg-[var(--accent-green-dark)]",
     description:
@@ -121,7 +121,7 @@ export default function ModulesSection() {
   };
 
   return (
-    <section className="relative w-full flex justify-center bg-[var(--background-darker)] pt-[64px] pb-[64px] overflow-hidden">
+    <section className="relative w-full flex justify-center bg-[var(--background-darker)] py-[40px] px-[16px] overflow-hidden">
       {/* Grade de fundo com sombra */}
       <div
         className="absolute left-0 right-0 top-[180px] h-[620px] z-0 pointer-events-none"
@@ -153,32 +153,30 @@ export default function ModulesSection() {
               className="w-[343px] bg-[var(--surface-dark)] border border-[var(--surface-border)] rounded-2xl overflow-hidden transition-all duration-300"
             >
               <button
-                className="w-full flex items-center justify-between px-4 py-4"
+                className="w-full h-[88px] flex items-center justify-between px-6 py-6"
                 onClick={() => toggle(index)}
               >
                 <div className="flex items-center gap-4 text-left">
                   <div
-                    className={`w-8 h-8 flex items-center justify-center rounded-full text-[14px] font-bold ${module.colorText} ${module.colorBg}`}
+                    className={`w-[40px] h-[40px] flex items-center justify-center rounded-full text-[24px] font-bold ${module.colorText} ${module.colorBg}`}
                   >
                     {module.id}
                   </div>
-                  <span className="text-white text-[14px] font-semibold leading-snug whitespace-pre-line">
+                  <span className="w-[199px] text-white text-[16px] font-semibold leading-snug whitespace-normal">
                     {module.title}
                   </span>
                 </div>
                 <Image
                   src={isOpen ? "/circle-minus.svg" : "/circle-plus.svg"}
                   alt="Toggle"
-                  width={16}
-                  height={16}
+                  width={24}
+                  height={24}
                 />
               </button>
 
               {isOpen && (
                 <div className="px-4 pb-4 text-white/70 text-sm">
-                  <p className="mb-4 leading-relaxed whitespace-pre-line">
-                    {module.description}
-                  </p>
+                  <p className="mb-4 leading-relaxed">{module.description}</p>
 
                   <div className="h-px w-full border-t border-dashed border-white/20 my-4" />
 

@@ -23,11 +23,15 @@ const BenefitCard = ({
   title,
   description,
 }: BenefitCardProps) => (
-  <div className="flex flex-col items-start gap-3 p-4 rounded-2xl bg-[var(--surface-dark)] border border-[var(--surface-border)]">
+  <div className="flex flex-col items-start gap-[32px] p-[24px] rounded-2xl bg-[var(--surface-dark)] border border-[var(--surface-border)]">
     <div className={`text-2xl ${iconColorClass}`}>{icon}</div>
-    <div>
-      <h3 className="font-semibold text-[var(--text-white)]">{title}</h3>
-      <p className="text-sm text-[var(--text-white)]/80 mt-1">{description}</p>
+    <div className="flex flex-col gap-2">
+      <h3 className="text-[20px] font-semibold text-[var(--text-white)]">
+        {title}
+      </h3>
+      <p className="w-[295px] text-sm text-[var(--text-white)]/80">
+        {description}
+      </p>
     </div>
   </div>
 );
@@ -65,7 +69,7 @@ export default function BenefitsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full flex justify-center bg-[var(--background-darker)] pt-[64px] pb-0 overflow-hidden"
+      className="relative w-full flex justify-center bg-[var(--background-darker)] py-[40px] px-[16px] overflow-hidden"
     >
       {/* GRADE DE FUNDO DINÂMICA */}
       <div
@@ -89,10 +93,10 @@ export default function BenefitsSection() {
       />
 
       {/* CONTEÚDO DOS CARDS */}
-      <div className="w-[343px] flex flex-col space-y-4 relative z-10">
+      <div className="w-[343px] flex flex-col gap-[16px] relative z-10">
         <div ref={null}>
           <BenefitCard
-            icon={<BookOpenText className="w-6 h-6 mb-2" />}
+            icon={<BookOpenText className="w-10 h-10 mb-2" />}
             iconColorClass="text-orange-500"
             title="Aulas dinâmicas e objetivas"
             description="Conteúdo direto, com exemplos visuais que facilitam o aprendizado."
@@ -100,34 +104,34 @@ export default function BenefitsSection() {
         </div>
         <div ref={secondCardRef}>
           <BenefitCard
-            icon={<FileText className="w-6 h-6 mb-2" />}
+            icon={<FileText className="w-10 h-10 mb-2" />}
             iconColorClass="text-blue-500"
             title="Módulo completo sobre o novo exame do PMI"
             description="Entenda o formato atualizado da prova, tipos de questões e estratégias específicas para se destacar no novo modelo."
           />
         </div>
         <BenefitCard
-          icon={<Timer className="w-6 h-6 mb-2" />}
+          icon={<Timer className="w-10 h-10 mb-2" />}
           iconColorClass="text-cyan-400"
           title="Simulados cronometrados com explicações"
           description="Simulados reais com limite de tempo, correção detalhada e feedback para você entender onde melhorar."
         />
         <BenefitCard
-          icon={<CalendarCheck className="w-6 h-6 mb-2" />}
+          icon={<CalendarCheck className="w-10 h-10 mb-2" />}
           iconColorClass="text-purple-400"
           title="Plano de estudos prático"
           description="Roteiro simples para estudar com clareza, mesmo com pouco tempo."
         />
         <div ref={penultimateCardRef}>
           <BenefitCard
-            icon={<TabletSmartphone className="w-6 h-6 mb-2" />}
+            icon={<TabletSmartphone className="w-10 h-10 mb-2" />}
             iconColorClass="text-emerald-400"
             title="Aplicativo para estudar de onde quiser"
             description="Acesse todo o conteúdo pelo celular ou tablet. Estude no seu ritmo, onde estiver."
           />
         </div>
         <BenefitCard
-          icon={<BadgeCheck className="w-6 h-6 mb-2" />}
+          icon={<BadgeCheck className="w-10 h-10 mb-2" />}
           iconColorClass="text-yellow-400"
           title="Certificado de 35h para aplicação no PMI"
           description="Ao concluir, você recebe um certificado aceito pelo PMI para comprovar a carga horária exigida."

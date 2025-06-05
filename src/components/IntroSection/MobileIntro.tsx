@@ -2,10 +2,10 @@
 
 export default function MobileIntro() {
   return (
-    <section className="w-full flex justify-center bg-[var(--background-darker)] py-[64px] relative overflow-hidden">
+    <section className="w-full flex justify-center bg-[var(--background-darker)] py-[40px] px-[16px] relative overflow-hidden">
       {/* GRADE CENTRALIZADA - menor altura */}
       <div
-        className="absolute w-[343px] h-[320px] top-1/2 -translate-y-1/2 z-0 pointer-events-none"
+        className="absolute w-[343px] h-[432px] top-1/2 -translate-y-1/2 z-0 pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(to right, rgba(62,109,253,0.12) 1px, transparent 1px),

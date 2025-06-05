@@ -15,12 +15,12 @@ function MobileHero() {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center relative py-12">
+    <div className="w-full flex flex-col items-center relative py-[64px] px-[16px]">
       {/* Iluminação mobile */}
       <div className="absolute bottom-0 w-[343px] h-[200px] bg-[radial-gradient(ellipse_at_bottom,_#238CFF_80%,_#1B1F24_100%)] blur-[100px] opacity-100 rounded-full -z-10 pointer-events-none" />
 
       <div className="w-full max-w-[343px] text-left z-10">
-        <h1 className="text-[40px] font-black leading-tight text-white">
+        <h1 className="text-[40px] font-black leading-[44px] text-white">
           Conquiste sua
           <br />
           Certificação
@@ -35,7 +35,7 @@ function MobileHero() {
           </span>
         </h1>
 
-        <p className="mt-4 text-sm font-semibold text-white leading-relaxed">
+        <p className="mt-4 text-sm font-semibold text-white">
           O curso intensivo que vai te levar direto à aprovação no exame PMP,
           com aulas objetivas, simulados estratégicos e suporte completo.
         </p>

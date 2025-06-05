@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PricingSection() {
   return (
-    <section className="w-full flex flex-col items-center bg-[var(--background-darker)] py-20 relative overflow-hidden">
+    <section className="w-full flex flex-col items-center bg-[var(--background-darker)] py-10 relative overflow-hidden">
       {/* Grade de fundo + iluminação sobreposta */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Grade */}
@@ -25,7 +25,7 @@ export default function PricingSection() {
           style={{
             backgroundImage:
               "linear-gradient(to top, #9D8AFE 0%, transparent 80%)",
-            opacity: 0.4,
+            opacity: 0.3,
           }}
         />
       </div>
