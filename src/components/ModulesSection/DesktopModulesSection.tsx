@@ -3,12 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { CirclePlay, BadgeCheck } from "lucide-react";
 
 const modules = [
   {
     id: 1,
     title: "Introdução ao exame e plano de estudos",
-    color: "bg-blue-600",
     description:
       "Entenda tudo sobre a certificação PMP®: como funciona, quais os requisitos, e como se organizar com estratégia para garantir sua aprovação.",
     preview: [
@@ -22,7 +22,6 @@ const modules = [
   {
     id: 2,
     title: "Ambiente de Negócio",
-    color: "bg-purple-600",
     description:
       "Explore o contexto empresarial e entenda como projetos se alinham com objetivos organizacionais.",
     preview: [
@@ -35,7 +34,6 @@ const modules = [
   {
     id: 3,
     title: "Início do Projeto",
-    color: "bg-pink-600",
     description:
       "Compreenda os processos iniciais para dar início a um projeto sólido e bem definido.",
     preview: [
@@ -48,7 +46,6 @@ const modules = [
   {
     id: 4,
     title: "Planejamento do Projeto",
-    color: "bg-orange-600",
     description:
       "Aprenda como planejar com eficácia escopo, cronograma, custos e riscos do projeto.",
     preview: [
@@ -62,7 +59,6 @@ const modules = [
   {
     id: 5,
     title: "Liderança na Equipe do Projeto",
-    color: "bg-yellow-500",
     description:
       "Desenvolva habilidades de liderança, comunicação e gestão de conflitos na equipe do projeto.",
     preview: [
@@ -75,7 +71,6 @@ const modules = [
   {
     id: 6,
     title: "Execução e Monitoramento do Projeto",
-    color: "bg-emerald-500",
     description:
       "Execute o projeto conforme planejado, monitorando entregas, qualidade e desempenho continuamente.",
     preview: ["Gestão da qualidade", "KPIs", "Controle de mudanças"],
@@ -84,7 +79,6 @@ const modules = [
   {
     id: 7,
     title: "Encerramento do Projeto",
-    color: "bg-blue-500",
     description:
       "Finalize o projeto corretamente, documentando lições aprendidas e entregando valor.",
     preview: [
@@ -97,13 +91,55 @@ const modules = [
   {
     id: 8,
     title: "Simulados e Preparação Final",
-    color: "bg-purple-500",
     description:
       "Teste seus conhecimentos com simulados realistas e revise conteúdos estratégicos.",
     preview: ["Simulados PMP®", "Dicas da prova", "Análise de desempenho"],
     extra: "4 Simulados, Revisões",
   },
 ];
+
+const styles = {
+  1: {
+    text: "text-[var(--accent-b-blue)]",
+    bg: "bg-[var(--accent-b-blue-dark)]",
+    hover: "hover:bg-[var(--accent-b-blue)] hover:text-[var(--surface-dark)]",
+  },
+  2: {
+    text: "text-[var(--accent-purple)]",
+    bg: "bg-[var(--accent-purple-dark)]",
+    hover: "hover:bg-[var(--accent-purple)] hover:text-[var(--surface-dark)]",
+  },
+  3: {
+    text: "text-[var(--accent-pink)]",
+    bg: "bg-[var(--accent-pink-dark)]",
+    hover: "hover:bg-[var(--accent-pink)] hover:text-[var(--surface-dark)]",
+  },
+  4: {
+    text: "text-[var(--accent-orange)]",
+    bg: "bg-[var(--accent-orange-dark)]",
+    hover: "hover:bg-[var(--accent-orange)] hover:text-[var(--surface-dark)]",
+  },
+  5: {
+    text: "text-[var(--accent-yellow)]",
+    bg: "bg-[var(--accent-yellow-dark)]",
+    hover: "hover:bg-[var(--accent-yellow)] hover:text-[var(--surface-dark)]",
+  },
+  6: {
+    text: "text-[var(--accent-green)]",
+    bg: "bg-[var(--accent-green-dark)]",
+    hover: "hover:bg-[var(--accent-green)] hover:text-[var(--surface-dark)]",
+  },
+  7: {
+    text: "text-[var(--accent-blue)]",
+    bg: "bg-[var(--accent-blue-dark)]",
+    hover: "hover:bg-[var(--accent-blue)] hover:text-[var(--surface-dark)]",
+  },
+  8: {
+    text: "text-[var(--accent-purple)]",
+    bg: "bg-[var(--accent-purple-dark)]",
+    hover: "hover:bg-[var(--accent-purple)] hover:text-[var(--surface-dark)]",
+  },
+};
 
 export default function DesktopModulesSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -114,21 +150,21 @@ export default function DesktopModulesSection() {
 
   return (
     <section className="w-full bg-[var(--background-darker)] py-[120px] flex flex-col items-center relative overflow-hidden">
-      {/* Grade central sutil e menor */}
-      <div
-        className="absolute inset-0 pointer-events-none z-0"
+      {/* Grade de fundo */}
+      <motion.div
+        className="absolute top-1/2 left-1/2 w-[1128px] h-[800px] -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
+        animate={{
+          backgroundSize: openIndex !== null ? "38px 38px" : "30px 30px",
+        }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)
+            linear-gradient(to right, rgba(62,109,253,0.12) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(62,109,253,0.12) 1px, transparent 1px)
           `,
-          backgroundSize: "28px 28px",
-          maskImage: `
-            radial-gradient(circle at center, black 20%, transparent 70%)
-          `,
-          WebkitMaskImage: `
-            radial-gradient(circle at center, black 20%, transparent 70%)
-          `,
+          backgroundPosition: "0 22px",
+          maskImage: `radial-gradient(circle at center, black 20%, transparent 70%)`,
+          WebkitMaskImage: `radial-gradient(circle at center, black 20%, transparent 70%)`,
         }}
       />
       <div className="w-full max-w-[1128px] flex gap-[120px] relative z-10">
@@ -145,23 +181,31 @@ export default function DesktopModulesSection() {
           <h2 className="text-white font-gochi text-[32px] mb-6">
             Módulos principais
           </h2>
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-3 gap-2">
             {modules.map((module, index) => {
               const isOpen = openIndex === index;
+              const { text, bg, hover } =
+                styles[module.id as keyof typeof styles];
+
               return (
-                <div
+                <motion.div
                   key={module.id}
+                  layout
                   onClick={() => toggle(index)}
-                  className={`cursor-pointer border border-white/10 rounded-2xl w-[648px] transition-all duration-300 overflow-hidden group bg-[var(--surface-dark)] hover:${module.color}`}
+                  className={`cursor-pointer w-[648px] transition-all duration-300 overflow-hidden rounded-2xl border border-[var(--surface-border)] ${
+                    isOpen
+                      ? "bg-[var(--surface-dark)] text-white"
+                      : `bg-[var(--surface-dark)] text-white ${hover}`
+                  }`}
                 >
                   <div className="flex items-center justify-between p-[24px] h-[88px]">
                     <div className="flex items-center gap-4">
                       <div
-                        className={`w-10 h-10 flex items-center justify-center rounded-full text-white text-[24px] font-bold ${module.color}`}
+                        className={`w-10 h-10 flex items-center justify-center rounded-full text-[24px] font-bold ${text} ${bg}`}
                       >
                         {module.id}
                       </div>
-                      <span className="text-white text-[18px] font-medium leading-tight">
+                      <span className="text-[18px] font-medium leading-tight">
                         {module.title}
                       </span>
                     </div>
@@ -175,15 +219,15 @@ export default function DesktopModulesSection() {
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.div
-                        className="px-6 pb-6 text-white text-sm"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                         transition={{
-                          duration: 0.5,
-                          type: "spring",
-                          bounce: 0.3,
+                          duration: 0.4,
+                          ease: "easeInOut",
                         }}
+                        className="px-6 pb-6 text-white text-sm"
                       >
                         <p className="text-white/80 leading-relaxed mb-4">
                           {module.description}
@@ -198,19 +242,29 @@ export default function DesktopModulesSection() {
                           ))}
                         </ul>
                         <div className="flex gap-2 mt-4 flex-wrap">
-                          {module.extra?.split(",").map((label, i) => (
-                            <span
-                              key={i}
-                              className="text-xs bg-[#0E0F12] text-white/90 border border-white/10 rounded-full px-3 py-1"
-                            >
-                              {label.trim()}
-                            </span>
-                          ))}
+                          {module.extra?.split(",").map((label, i) => {
+                            const trimmed = label.trim();
+                            const isVideo =
+                              trimmed.toLowerCase().includes("aula") ||
+                              trimmed.toLowerCase().includes("simulado");
+
+                            const Icon = isVideo ? CirclePlay : BadgeCheck;
+
+                            return (
+                              <span
+                                key={i}
+                                className="flex items-center gap-1 text-xs bg-[#0E0F12] text-white/90 border border-white/10 rounded-full px-3 py-1"
+                              >
+                                <Icon className="w-3.5 h-3.5" />
+                                {trimmed}
+                              </span>
+                            );
+                          })}
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </div>
+                </motion.div>
               );
             })}
           </div>

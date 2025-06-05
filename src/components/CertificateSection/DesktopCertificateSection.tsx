@@ -7,19 +7,16 @@ export default function DesktopCertificateSection() {
     <section className="w-full bg-[var(--background-darker)] py-[120px] flex flex-col items-center relative overflow-hidden">
       {/* Grade central sutil e menor */}
       <div
-        className="absolute inset-0 pointer-events-none z-0"
+        className="absolute top-1/2 left-1/2 w-[1128px] h-[700px] -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)
-          `,
+      linear-gradient(to right, rgba(62,109,253,0.12) 1px, transparent 2px),
+      linear-gradient(to bottom, rgba(62,109,253,0.12) 1px, transparent 2px)
+    `,
           backgroundSize: "28px 28px",
-          maskImage: `
-            radial-gradient(circle at center, black 20%, transparent 70%)
-          `,
-          WebkitMaskImage: `
-            radial-gradient(circle at center, black 20%, transparent 70%)
-          `,
+          backgroundPosition: "0 22px",
+          maskImage: `radial-gradient(circle at center, black 20%, transparent 75%)`,
+          WebkitMaskImage: `radial-gradient(circle at center, black 20%, transparent 75%)`,
         }}
       />
 

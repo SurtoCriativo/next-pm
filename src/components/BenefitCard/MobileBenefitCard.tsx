@@ -1,12 +1,12 @@
 "use client";
 
 import {
-  BookOpen,
+  BookOpenText,
   FileText,
-  Clock,
-  Calendar,
-  Smartphone,
-  Award,
+  Timer,
+  CalendarCheck,
+  TabletSmartphone,
+  BadgeCheck,
 } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
@@ -23,7 +23,7 @@ const BenefitCard = ({
   title,
   description,
 }: BenefitCardProps) => (
-  <div className="flex flex-col items-start gap-3 p-4 rounded-2xl bg-[var(--surface-dark)]">
+  <div className="flex flex-col items-start gap-3 p-4 rounded-2xl bg-[var(--surface-dark)] border border-[var(--surface-border)]">
     <div className={`text-2xl ${iconColorClass}`}>{icon}</div>
     <div>
       <h3 className="font-semibold text-[var(--text-white)]">{title}</h3>
@@ -92,7 +92,7 @@ export default function BenefitsSection() {
       <div className="w-[343px] flex flex-col space-y-4 relative z-10">
         <div ref={null}>
           <BenefitCard
-            icon={<BookOpen className="w-6 h-6 mb-2" />}
+            icon={<BookOpenText className="w-6 h-6 mb-2" />}
             iconColorClass="text-orange-500"
             title="Aulas dinâmicas e objetivas"
             description="Conteúdo direto, com exemplos visuais que facilitam o aprendizado."
@@ -107,27 +107,27 @@ export default function BenefitsSection() {
           />
         </div>
         <BenefitCard
-          icon={<Clock className="w-6 h-6 mb-2" />}
+          icon={<Timer className="w-6 h-6 mb-2" />}
           iconColorClass="text-cyan-400"
           title="Simulados cronometrados com explicações"
           description="Simulados reais com limite de tempo, correção detalhada e feedback para você entender onde melhorar."
         />
         <BenefitCard
-          icon={<Calendar className="w-6 h-6 mb-2" />}
+          icon={<CalendarCheck className="w-6 h-6 mb-2" />}
           iconColorClass="text-purple-400"
           title="Plano de estudos prático"
           description="Roteiro simples para estudar com clareza, mesmo com pouco tempo."
         />
         <div ref={penultimateCardRef}>
           <BenefitCard
-            icon={<Smartphone className="w-6 h-6 mb-2" />}
+            icon={<TabletSmartphone className="w-6 h-6 mb-2" />}
             iconColorClass="text-emerald-400"
             title="Aplicativo para estudar de onde quiser"
             description="Acesse todo o conteúdo pelo celular ou tablet. Estude no seu ritmo, onde estiver."
           />
         </div>
         <BenefitCard
-          icon={<Award className="w-6 h-6 mb-2" />}
+          icon={<BadgeCheck className="w-6 h-6 mb-2" />}
           iconColorClass="text-yellow-400"
           title="Certificado de 35h para aplicação no PMI"
           description="Ao concluir, você recebe um certificado aceito pelo PMI para comprovar a carga horária exigida."

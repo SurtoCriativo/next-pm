@@ -12,11 +12,11 @@ export default function PricingSection() {
           className="absolute top-1/2 left-0 w-full h-[505px] -translate-y-1/2 z-0 pointer-events-none"
           style={{
             backgroundImage: `
-      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)
-    `,
-            backgroundSize: "28px 25px", // maior espaçamento entre linhas
-            backgroundPosition: "0 22px", // puxa a grade pra baixo e esconde a 1ª linha
+              linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)
+            `,
+            backgroundSize: "28px 25px",
+            backgroundPosition: "0 22px",
           }}
         />
         {/* Iluminação */}
@@ -32,17 +32,14 @@ export default function PricingSection() {
 
       {/* Conteúdo */}
       <div className="relative z-10 max-w-[343px]">
-        {/* Chamada */}
         <h3 className="text-[32px] font-gochi text-purple-400 mb-6">
           Garanta sua vaga!
         </h3>
 
-        {/* Título */}
         <h2 className="text-white text-[32px] font-black leading-tight mb-4">
           Seu caminho direto até a certificação PMP
         </h2>
 
-        {/* Parágrafo introdutório */}
         <p className="w-[343px] h-[192px] text-white/80 text-[18px] leading-relaxed mb-8">
           Com acesso vitalício, suporte estratégico e<br />
           simulados atualizados, essa é a<br />
@@ -55,18 +52,28 @@ export default function PricingSection() {
         </p>
 
         {/* CARD DE PREÇO */}
-        <div className="relative bg-gradient-to-b from-[#1b1f24] via-[#1f2230] to-[#272948] border border-white/10 rounded-2xl px-4 py-4 w-[343px] h-[670px] mx-auto text-white shadow-lg">
+        <div
+          className="relative rounded-2xl px-4 py-4 w-[343px] h-[670px] mx-auto text-white shadow-lg border backdrop-blur-md"
+          style={{
+            background: `linear-gradient(
+              180deg,
+              var(--surface-alpha-brand, rgba(51, 129, 255, 0.05)) 0%,
+              var(--surface-alpha-black, rgba(8, 11, 18, 0.10)) 100%
+            )`,
+            borderColor: "var(--surface-border, #374151)",
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+          }}
+        >
           {/* Topo com selo */}
           <div className="flex items-center justify-between mb-6">
             <Image src="/icon-card.svg" alt="Selo" width={48} height={32} />
             <span
-              className="flex items-center justify-center border bg-[#0E0F12] rounded-full text-white text-[16px]"
+              className="flex items-center justify-center bg-[#0E0F12] rounded-full text-white text-[16px]"
               style={{
                 width: "227px",
                 height: "40px",
-                borderColor: "#374151",
-                borderWidth: "1px",
-                borderStyle: "solid",
+                border: "1px solid var(--surface-border, #374151)",
               }}
             >
               <span className="mr-1" style={{ color: "#9D8AFE" }}>

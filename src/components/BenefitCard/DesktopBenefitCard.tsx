@@ -1,17 +1,17 @@
 "use client";
 
 import {
-  BookOpen,
+  BookOpenText,
   FileText,
-  Clock,
-  Calendar,
-  Smartphone,
-  Award,
+  Timer,
+  CalendarCheck,
+  TabletSmartphone,
+  BadgeCheck,
 } from "lucide-react";
 
 const cardList = [
   {
-    icon: <BookOpen className="w-10 h-10" />, // 40px
+    icon: <BookOpenText className="w-10 h-10" />,
     iconColor: "group-hover:text-orange-500",
     title: "Aulas dinâmicas e objetivas",
     description:
@@ -29,7 +29,7 @@ const cardList = [
     height: "h-[248px]",
   },
   {
-    icon: <Clock className="w-10 h-10" />,
+    icon: <Timer className="w-10 h-10" />,
     iconColor: "group-hover:text-cyan-400",
     title: "Simulados cronometrados com explicações",
     description:
@@ -38,7 +38,7 @@ const cardList = [
     height: "h-[248px]",
   },
   {
-    icon: <Calendar className="w-10 h-10" />,
+    icon: <CalendarCheck className="w-10 h-10" />,
     iconColor: "group-hover:text-purple-500",
     title: "Plano de estudos prático",
     description:
@@ -47,7 +47,7 @@ const cardList = [
     height: "h-[248px]",
   },
   {
-    icon: <Smartphone className="w-10 h-10" />,
+    icon: <TabletSmartphone className="w-10 h-10" />,
     iconColor: "group-hover:text-emerald-400",
     title: "Aplicativo para estudar de onde quiser",
     description:
@@ -56,7 +56,7 @@ const cardList = [
     height: "h-[248px]",
   },
   {
-    icon: <Award className="w-10 h-10" />,
+    icon: <BadgeCheck className="w-10 h-10" />,
     iconColor: "group-hover:text-yellow-400",
     title: "Certificado de 35h para aplicação no PMI",
     description:
@@ -69,7 +69,7 @@ const cardList = [
 function Card({ icon, title, description, iconColor, width, height }: any) {
   return (
     <div
-      className={`group flex flex-col p-[24px] rounded-2xl ${width} ${height} bg-[var(--surface-dark)] transition-colors duration-300`}
+      className={`group flex flex-col p-[24px] rounded-2xl ${width} ${height} bg-[var(--surface-dark)] border border-[var(--surface-border)] transition-colors duration-300`}
     >
       <div
         className={`text-[28px] text-white/30 ${iconColor} transition-colors`}
@@ -89,21 +89,18 @@ function Card({ icon, title, description, iconColor, width, height }: any) {
 export default function DesktopBenefitCard() {
   return (
     <section className="w-full bg-[var(--background-darker)] py-[120px] flex flex-col items-center relative overflow-hidden">
-      {/* Grade central sutil e menor */}
+      {/* Grade de fundo */}
       <div
-        className="absolute inset-0 pointer-events-none z-0"
+        className="absolute top-1/2 left-1/2 w-[1128px] h-[1000px] -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)
-          `,
-          backgroundSize: "28px 28px",
-          maskImage: `
-            radial-gradient(circle at center, black 20%, transparent 70%)
-          `,
-          WebkitMaskImage: `
-            radial-gradient(circle at center, black 20%, transparent 70%)
-          `,
+  linear-gradient(to right, rgba(62,109,253,0.12) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(62,109,253,0.12) 1px, transparent 1px)
+`,
+          backgroundSize: "30px 30px",
+          backgroundPosition: "0 22px",
+          maskImage: `radial-gradient(circle at center, black 20%, transparent 70%)`,
+          WebkitMaskImage: `radial-gradient(circle at center, black 20%, transparent 70%)`,
         }}
       />
 

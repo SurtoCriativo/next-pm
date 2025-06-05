@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { CirclePlay, BadgeCheck } from "lucide-react";
 
 const modules = [
   {
     id: 1,
     title: "Introdução ao exame e plano de estudos",
-    color: "bg-blue-600",
+    colorText: "text-[var(--accent-b-blue)]",
+    colorBg: "bg-[var(--accent-b-blue-dark)]",
     description:
       "Entenda tudo sobre a certificação PMP®: como funciona, quais os requisitos, e como se organizar com estratégia para garantir sua aprovação.",
     preview: [
@@ -21,7 +23,8 @@ const modules = [
   {
     id: 2,
     title: "Ambiente de Negócio",
-    color: "bg-purple-600",
+    colorText: "text-[var(--accent-purple)]",
+    colorBg: "bg-[var(--accent-purple-dark)]",
     description:
       "Explore o contexto empresarial e entenda como projetos se alinham com objetivos organizacionais.",
     preview: [
@@ -34,7 +37,8 @@ const modules = [
   {
     id: 3,
     title: "Início do Projeto",
-    color: "bg-pink-600",
+    colorText: "text-[var(--accent-pink)]",
+    colorBg: "bg-[var(--accent-pink-dark)]",
     description:
       "Compreenda os processos iniciais para dar início a um projeto sólido e bem definido.",
     preview: [
@@ -47,7 +51,8 @@ const modules = [
   {
     id: 4,
     title: "Planejamento do Projeto",
-    color: "bg-orange-600",
+    colorText: "text-[var(--accent-orange)]",
+    colorBg: "bg-[var(--accent-orange-dark)]",
     description:
       "Aprenda como planejar com eficácia escopo, cronograma, custos e riscos do projeto.",
     preview: [
@@ -61,7 +66,8 @@ const modules = [
   {
     id: 5,
     title: "Liderança na Equipe do Projeto",
-    color: "bg-yellow-500",
+    colorText: "text-[var(--accent-yellow)]",
+    colorBg: "bg-[var(--accent-yellow-dark)]",
     description:
       "Desenvolva habilidades de liderança, comunicação e gestão de conflitos na equipe do projeto.",
     preview: [
@@ -74,7 +80,8 @@ const modules = [
   {
     id: 6,
     title: "Execução e\nMonitoramento do Projeto",
-    color: "bg-emerald-500",
+    colorText: "text-[var(--accent-green)]",
+    colorBg: "bg-[var(--accent-green-dark)]",
     description:
       "Execute o projeto conforme planejado, monitorando entregas, qualidade e desempenho continuamente.",
     preview: ["Gestão da qualidade", "KPIs", "Controle de mudanças"],
@@ -83,7 +90,8 @@ const modules = [
   {
     id: 7,
     title: "Encerramento do Projeto",
-    color: "bg-blue-500",
+    colorText: "text-[var(--accent-blue)]",
+    colorBg: "bg-[var(--accent-blue-dark)]",
     description:
       "Finalize o projeto corretamente, documentando lições aprendidas e entregando valor.",
     preview: [
@@ -96,7 +104,8 @@ const modules = [
   {
     id: 8,
     title: "Simulados e Preparação Final",
-    color: "bg-purple-500",
+    colorText: "text-[var(--accent-purple)]",
+    colorBg: "bg-[var(--accent-purple-dark)]",
     description:
       "Teste seus conhecimentos com simulados realistas e revise conteúdos estratégicos.",
     preview: ["Simulados PMP®", "Dicas da prova", "Análise de desempenho"],
@@ -141,7 +150,7 @@ export default function ModulesSection() {
           return (
             <div
               key={module.id}
-              className="w-[343px] bg-[var(--surface-dark)] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300"
+              className="w-[343px] bg-[var(--surface-dark)] border border-[var(--surface-border)] rounded-2xl overflow-hidden transition-all duration-300"
             >
               <button
                 className="w-full flex items-center justify-between px-4 py-4"
@@ -149,7 +158,7 @@ export default function ModulesSection() {
               >
                 <div className="flex items-center gap-4 text-left">
                   <div
-                    className={`w-8 h-8 flex items-center justify-center rounded-full text-white text-[14px] font-bold ${module.color}`}
+                    className={`w-8 h-8 flex items-center justify-center rounded-full text-[14px] font-bold ${module.colorText} ${module.colorBg}`}
                   >
                     {module.id}
                   </div>
@@ -171,7 +180,6 @@ export default function ModulesSection() {
                     {module.description}
                   </p>
 
-                  {/* Separador pontilhado */}
                   <div className="h-px w-full border-t border-dashed border-white/20 my-4" />
 
                   <p className="text-xs text-white/40 mb-2">Prévia</p>
@@ -182,14 +190,23 @@ export default function ModulesSection() {
                   </ul>
 
                   <div className="flex gap-2 mt-4 flex-wrap">
-                    {module.extra?.split(",").map((label, i) => (
-                      <span
-                        key={i}
-                        className="text-xs bg-[#0E0F12] text-white/90 border border-white/10 rounded-full px-3 py-1"
-                      >
-                        {label.trim()}
-                      </span>
-                    ))}
+                    {module.extra?.split(",").map((label, i) => {
+                      const trimmed = label.trim();
+                      const isVideo =
+                        trimmed.toLowerCase().includes("aula") ||
+                        trimmed.toLowerCase().includes("simulado");
+                      const Icon = isVideo ? CirclePlay : BadgeCheck;
+
+                      return (
+                        <span
+                          key={i}
+                          className="flex items-center gap-1 text-xs bg-[#0E0F12] text-white/90 border border-white/10 rounded-full px-3 py-1"
+                        >
+                          <Icon className="w-3.5 h-3.5" />
+                          {trimmed}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               )}

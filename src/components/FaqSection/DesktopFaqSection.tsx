@@ -36,7 +36,7 @@ export default function DesktopFaqSection() {
   };
 
   return (
-    <section className="w-full flex justify-center bg-[var(--background-darker)] py-[80px] relative overflow-hidden">
+    <section className="w-full flex justify-center bg-[var(--background-darker)] py-[120px] relative overflow-hidden">
       <div className="w-full max-w-[1128px] flex justify-between gap-[120px]">
         {/* Coluna esquerda */}
         <div className="w-[520px]">

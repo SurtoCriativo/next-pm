@@ -5,11 +5,25 @@
 :root {
   /* 🎨 Cores de destaque */
   --accent-purple: #9d8afe;
+  --accent-purple-dark: #281c54;
+
   --accent-blue: #55a1f2;
+  --accent-blue-dark: #113760;
+
+  --accent-b-blue: #3381ff;
+  --accent-b-blue-dark: #143466;
+
   --accent-pink: #ed58cc;
+  --accent-pink-dark: #5d124c;
+
   --accent-orange: #ff9d3b;
+  --accent-orange-dark: #663504;
+
   --accent-yellow: #fabc40;
+  --accent-yellow-dark: #644406;
+
   --accent-green: #44cb93;
+  --accent-green-dark: #084c30;
 
   /* 📝 Cores de texto */
   --text-white: #ffffff;
@@ -33,6 +47,12 @@
     --background: #080b12;
     --foreground: #ededed;
   }
+}
+
+:root {
+  --surface-border: #374151;
+  --surface-alpha-brand: rgba(51, 129, 255, 0.05);
+  --surface-alpha-black: rgba(8, 11, 18, 0.1);
 }
 
 body {
