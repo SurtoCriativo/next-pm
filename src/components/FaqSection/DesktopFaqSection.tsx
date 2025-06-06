@@ -60,13 +60,7 @@ export default function DesktopFaqSection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/icon-email.svg"
-                alt="Email"
-                width={48}
-                height={48}
-                className="w-[48px] h-[48px]"
-              />
+              <Image src="/icon-email.svg" alt="Email" width={48} height={48} />
             </a>
             <a
               href="https://wa.me/5500000000000"
@@ -78,28 +72,26 @@ export default function DesktopFaqSection() {
                 alt="WhatsApp"
                 width={48}
                 height={48}
-                className="w-[48px] h-[48px]"
               />
             </a>
           </div>
         </div>
 
         {/* Coluna direita */}
-        <div className="flex flex-col gap-[8px] w-full">
+        <div className="flex flex-col gap-[8px] w-[552px]">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={index}
-                className="bg-[#11141C] border border-white/10 rounded-xl overflow-hidden transition-all duration-300"
+                className="bg-[#11141C] border border-white/10 rounded-xl overflow-hidden transition-all duration-300 ease-in-out w-[552px]"
                 style={{
-                  width: isOpen ? "552px" : "552px",
-                  height: isOpen ? "auto" : "64px",
+                  maxHeight: isOpen ? "1000px" : "64px",
                 }}
               >
                 <button
-                  className="w-full flex items-center justify-between text-left px-6 py-6"
                   onClick={() => toggleIndex(index)}
+                  className="w-full flex items-center justify-between text-left px-6 h-[64px]"
                 >
                   <span className="text-white text-[16px] font-semibold">
                     {item.question}
@@ -110,11 +102,14 @@ export default function DesktopFaqSection() {
                     <ChevronDown size={20} className="text-white" />
                   )}
                 </button>
-                {isOpen && (
-                  <div className="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-                    {item.answer}
-                  </div>
-                )}
+
+                <div
+                  className={`px-6 pb-6 text-white/70 text-sm leading-relaxed transition-opacity duration-200 ${
+                    isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+                  }`}
+                >
+                  {item.answer}
+                </div>
               </div>
             );
           })}
