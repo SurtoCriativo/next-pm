@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function DesktopPricingSection() {
   return (
@@ -21,7 +22,6 @@ export default function DesktopPricingSection() {
             WebkitMaskImage: `radial-gradient(circle at center, black 20%, transparent 75%)`,
           }}
         />
-
         {/* Iluminação */}
         <div
           className="absolute inset-0"
@@ -128,10 +128,14 @@ export default function DesktopPricingSection() {
             </li>
           </ul>
 
-          {/* Botão */}
-          <button className="w-full h-[48px] mt-12 bg-[#A78BFA] text-[18px] text-[#1B1F24] font-semibold rounded-full transition-colors hover:bg-[#c1a6ff]">
+          {/* Link estilizado como botão */}
+          <Link
+            href="/checkout"
+            className="block w-full h-[48px] mt-12 bg-[#A78BFA] text-[18px] text-[#1B1F24] font-semibold 
+             rounded-full transition-colors hover:bg-white text-center leading-[48px]"
+          >
             Garantir minha vaga
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PricingSection() {
   return (
@@ -127,10 +128,14 @@ export default function PricingSection() {
             </li>
           </ul>
 
-          {/* Botão */}
-          <button className="w-[311px] h-[48px] mt-12 bg-[#A78BFA] text-[18px] text-[#1B1F24] font-semibold rounded-full transition-colors hover:bg-[#c1a6ff]">
+          {/* Link estilizado como botão */}
+          <Link
+            href="/checkout"
+            className="block w-[311px] h-[48px] mt-12 bg-[#A78BFA] text-[18px] text-[#1B1F24] font-semibold 
+             rounded-full transition-colors hover:bg-white text-center leading-[48px]"
+          >
             Garantir minha vaga
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -42,7 +42,7 @@ function DesktopHero() {
         <div className="relative w-[456px] h-[456px]">
           <motion.div
             animate={{ opacity: showFirst ? 1 : 0 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            transition={{ duration: 3, ease: "easeInOut" }}
             className="absolute inset-0"
           >
             <Image
@@ -55,7 +55,7 @@ function DesktopHero() {
 
           <motion.div
             animate={{ opacity: showFirst ? 0 : 1 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            transition={{ duration: 3, ease: "easeInOut" }}
             className="absolute inset-0"
           >
             <Image
