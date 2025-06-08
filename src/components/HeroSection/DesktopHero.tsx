@@ -1,19 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 
 function DesktopHero() {
-  const [showFirst, setShowFirst] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowFirst((prev) => !prev);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="w-dvw flex justify-center items-center relative h-[696px]">
       {/* Iluminação */}
@@ -39,32 +28,16 @@ function DesktopHero() {
           </p>
         </div>
 
+        {/* GIF Animado */}
         <div className="relative w-[456px] h-[456px]">
-          <motion.div
-            animate={{ opacity: showFirst ? 1 : 0 }}
-            transition={{ duration: 3, ease: "easeInOut" }}
-            className="absolute inset-0"
-          >
-            <Image
-              src="/logo-3d-01.svg"
-              alt="Ilustração 1"
-              fill
-              className="object-contain"
-            />
-          </motion.div>
-
-          <motion.div
-            animate={{ opacity: showFirst ? 0 : 1 }}
-            transition={{ duration: 3, ease: "easeInOut" }}
-            className="absolute inset-0"
-          >
-            <Image
-              src="/logo-3d-02.svg"
-              alt="Ilustração 2"
-              fill
-              className="object-contain"
-            />
-          </motion.div>
+          <Image
+            src="/animacaonextpm-v2.gif"
+            alt="Animação NEXT PM"
+            width={456}
+            height={456}
+            className="object-contain"
+            priority
+          />
         </div>
       </div>
     </div>

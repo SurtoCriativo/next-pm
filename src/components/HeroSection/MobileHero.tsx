@@ -1,19 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 
 function MobileHero() {
-  const [showFirst, setShowFirst] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowFirst((prev) => !prev);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="w-full flex flex-col items-center relative py-[64px] px-[16px]">
       {/* Iluminação mobile */}
@@ -41,32 +30,16 @@ function MobileHero() {
         </p>
       </div>
 
+      {/* GIF Animado */}
       <div className="mt-10 relative w-[343px] h-[343px] z-10">
-        <motion.div
-          animate={{ opacity: showFirst ? 1 : 0 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="absolute inset-0"
-        >
-          <Image
-            src="/logo-3d-01.svg"
-            alt="Ilustração 1"
-            fill
-            className="object-contain"
-          />
-        </motion.div>
-
-        <motion.div
-          animate={{ opacity: showFirst ? 0 : 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="absolute inset-0"
-        >
-          <Image
-            src="/logo-3d-02.svg"
-            alt="Ilustração 2"
-            fill
-            className="object-contain"
-          />
-        </motion.div>
+        <Image
+          src="/animacaonextpm-v2.gif"
+          alt="Animação NEXT PM"
+          width={343}
+          height={343}
+          className="object-contain"
+          priority
+        />
       </div>
     </div>
   );

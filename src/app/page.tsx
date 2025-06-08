@@ -3,7 +3,7 @@ import IntroSection from "../components/IntroSection/IntroSection";
 import BenefitsSection from "../components/BenefitCard/BenefitCard";
 import ModulesSection from "../components/ModulesSection/ModulesSection";
 import CinematicQualitySection from "../components/CinematicQuality/CinematicQualitySection";
-import TestimonialSection from "../components/TestimonialSection";
+import TestimonialSection from "../components/Testimonial/TestimonialSection";
 import CourseHighlightSection from "../components/CourseHighlight/CourseHighlightSection";
 import CertificateSection from "../components/CertificateSection/CertificateSection";
 import PricingSection from "../components/PricingSection/PricingSection";
