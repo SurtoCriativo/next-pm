@@ -30,7 +30,7 @@ export default function Header() {
 
           {/* BOTÃO COM HOVER TOTALMENTE BRANCO E TEXTO ESCURO */}
           <Link
-            href="/vagas"
+            href="/"
             className="group w-[156px] h-[48px] inline-flex items-center justify-center rounded-full
                        bg-gradient-to-r from-purple-500 to-blue-500 p-[2px]
                        hover:from-white hover:to-white transition-colors duration-300"
