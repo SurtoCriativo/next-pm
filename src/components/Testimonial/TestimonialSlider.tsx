@@ -10,31 +10,31 @@ const testimonials = [
     text: "Texto curto.",
     name: "Nome Sobrenome",
     role: "Coordenadora de Projetos | Tecnologia | Membro do PMI",
-    image: "/avatar-1.png",
+    image: "/picture.svg",
   },
   {
     text: "Texto médio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     name: "Nome Sobrenome",
     role: "Coordenadora de Projetos | Tecnologia | Membro do PMI",
-    image: "/avatar-2.png",
+    image: "/picture.svg",
   },
   {
     text: "Texto longo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum libero eu dui tincidunt varius. Pellentesque sollicitudin mi vitae blandit dictum.",
     name: "Nome Sobrenome",
     role: "Coordenadora de Projetos | Tecnologia | Membro do PMI",
-    image: "/avatar-3.png",
+    image: "/picture.svg",
   },
   {
     text: "Texto curto.",
     name: "Nome Sobrenome",
     role: "Coordenadora de Projetos | Tecnologia | Membro do PMI",
-    image: "/avatar-4.png",
+    image: "/picture.svg",
   },
   {
     text: "Texto mais longo ainda. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a risus ac erat tincidunt fringilla ut a risus. Fusce efficitur velit nec erat pretium, nec fermentum nisi tempor.",
     name: "Nome Sobrenome",
     role: "Coordenadora de Projetos | Tecnologia | Membro do PMI",
-    image: "/avatar-4.png",
+    image: "/picture.svg",
   },
 ];
 
